@@ -16,7 +16,7 @@ h2{
   padding: 0.6em;
 }
 h2, h3{
-  font-size: 2em;
+  font-size: 1.8em;
 }
 h4{
   font-size: 1.5em;
@@ -126,6 +126,9 @@ div.par:hover{
 .card:hover{
   transform: translateY(-7px);
 }
+.card-title, .card-text{
+  font-family: 'Verdana', 'Geneva', 'Tahoma', 'sans-serif';
+}
 .icone{
   width: 2.2em;
   margin: 5px;
@@ -148,22 +151,42 @@ footer a{
   color: #fff;
   cursor: pointer;
 }
-@media (max-width: 320px){
+@media (min-width: 319px){
+  body, nav.navbar{
+    max-width: 320px;
+  }
   div.motivos-card:hover{
     display: flex;
     flex-direction: column;
   }
   .navbar-brand{
-    font-size: 17px;
+    font-size: 15px;
   }
 }
-@media (max-width: 376px){
+@media (min-width: 374px){
+  body, nav.navbar{
+    max-width: 375px;
+  }
   div.motivos-card:hover{
     display: flex;
     flex-direction: column;
   }
+  .navbar-brand{
+    font-size: 18px;
+  }
 }
-@media (max-width: 576px){
+@media (min-width: 424px){
+  body, nav.navbar{
+    max-width: 425px;
+  }
+  .navbar-brand{
+    font-size: 22px;
+  }
+}
+@media (min-width: 574px){
+  body, nav.navbar{
+    max-width: 575px;
+  }
   #banner{
     padding: 80px 0;
   }
@@ -171,26 +194,65 @@ footer a{
     padding: 10px 0;
   }
 }
-@media (min-width: 1024px){
-  body{
-    max-width: 1025px;
+@media (min-width: 767px){
+  body, nav.navbar{
+    max-width: 768px;
+  }
+  div.motivos-card:hover{
+    display: flex;
+    flex-direction: row;
+  }
+  div.par:hover{
+    display: flex;
+    flex-direction: row-reverse;
   }
 }
-@media (min-width: 1440px){
-  body{
-    max-width: 1441px;
+@media (min-width: 1023px){
+  body, nav.navbar{
+    max-width: 1024px;
+    font-size: 1em;
+  }
+}
+@media (min-width: 1439px){
+  body, nav.navbar{
+    max-width: 1440px;
+    font-size: 1.2em;
   } 
   nav.navbar {
-    width: 98%;
+    width: 1440px;
+  }
+  .navbar-brand{
+    font-size: 24px;
+  }
+  .lead{
+    font-size: 24px;
+  }
+  .btn-lg{
+    font-size: 24px;
+  }
+  .card-title{
+    font-size: 1.2em;
+  } 
+  .card-text{
+    font-size: 0.8em;
+  }
+  .btn-primary{
+    font-size: 1em;
+  }
+  .numeros{
+    width: 200px;
+  }
+  div.motivos-card>p{
+    font-size: 1.2em;
   }
 }
-@media (min-width: 2549px){
-  body{
-    max-width: 2561px;
-    font-size: 2em;
+@media (min-width: 2559px){
+  body, nav.navbar{
+    max-width: 2560px;
+    font-size: 1.5em;
   }
   nav.navbar {
-    width: 95%;
+    width: 2560px;
   }  
   .numeros{
     width: 250px;
