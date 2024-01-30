@@ -6,7 +6,53 @@
 body {
   margin: 0 auto;
   font-family: 'Verdana', 'Geneva', 'Tahoma', 'sans-serif';
-  font-size: 1em;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* Navbar */
+nav.navbar {
+  position: absolute;
+  width: 100%;
+  z-index: 5;
+  padding: 1.4em 0;
+}
+
+.navbar-brand, 
+.nav-link {
+  color: #ffffff;
+}
+
+nav.navbar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(88, 36, 182, 0.7);
+  z-index: 1;
+}
+ul>li>a.nav-link{
+  position: relative;
+  z-index: 3;
+  cursor: pointer;
+}
+/* Banner */
+#banner {
+  width: 100%;
+  height: auto;
+  background-image: url('./imagens/terra.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: #ffffff;
+  text-align: center;
+}
+.container {
+  position: relative;
+  z-index: 2;
 }
 .texto-central{
   margin-top: 25vh;
@@ -21,45 +67,14 @@ h2, h3{
 h4{
   font-size: 1.5em;
 }
-nav.navbar {
-  position: absolute;
-  width: 100%;
-  z-index: 2;
-  padding: 1.4em 0;
-}
-.navbar-brand, .nav-link{
-  color: #ffffff;
-}
-nav.navbar::before{
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(88, 36, 182, 0.7);
-  z-index: 1;
-}
-#banner{
-  width: 100%;
-  height: auto;
-  background-image: url('./imagens/terra.jpg');
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  color: #ffffff;
-}
-.container{
-  position: relative;
-  z-index: 2;
-}
 div.conteudo-central{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-#motivos, #contatos{
+#motivos, 
+#contatos{
   background-color: #fffcf2;
 }
 #servicos{
@@ -88,7 +103,8 @@ div.motivos-card p{
   font-family: 'Roboto', sans-serif;
   display: none;
 }
-div.motivos-card p, .card-text p{
+div.motivos-card p, 
+.card-text p{
   font-size: 1.5em;
 }
 div.motivos-card:hover{
@@ -126,7 +142,8 @@ div.par:hover{
 .card:hover{
   transform: translateY(-7px);
 }
-.card-title, .card-text{
+.card-title, 
+.card-text{
   font-family: 'Verdana', 'Geneva', 'Tahoma', 'sans-serif';
 }
 .icone{
@@ -152,7 +169,8 @@ footer a{
   cursor: pointer;
 }
 @media (min-width: 319px){
-  body, nav.navbar{
+  body, 
+  nav.navbar{
     max-width: 320px;
   }
   div.motivos-card:hover{
@@ -164,7 +182,8 @@ footer a{
   }
 }
 @media (min-width: 374px){
-  body, nav.navbar{
+  body, 
+  nav.navbar{
     max-width: 375px;
   }
   div.motivos-card:hover{
@@ -176,7 +195,8 @@ footer a{
   }
 }
 @media (min-width: 424px){
-  body, nav.navbar{
+  body, 
+  nav.navbar{
     max-width: 425px;
   }
   .navbar-brand{
@@ -184,18 +204,20 @@ footer a{
   }
 }
 @media (min-width: 574px){
-  body, nav.navbar{
+  body, 
+  nav.navbar{
     max-width: 575px;
   }
   #banner{
     padding: 80px 0;
   }
-  .navbar {
+  .navbar{
     padding: 10px 0;
   }
 }
 @media (min-width: 767px){
-  body, nav.navbar{
+  body, 
+  nav.navbar{
     max-width: 768px;
   }
   div.motivos-card:hover{
@@ -208,13 +230,15 @@ footer a{
   }
 }
 @media (min-width: 1023px){
-  body, nav.navbar{
+  body, 
+  nav.navbar{
     max-width: 1024px;
     font-size: 1em;
   }
 }
 @media (min-width: 1439px){
-  body, nav.navbar{
+  body, 
+  nav.navbar{
     max-width: 1440px;
     font-size: 1.2em;
   } 
@@ -247,7 +271,8 @@ footer a{
   }
 }
 @media (min-width: 2559px){
-  body, nav.navbar{
+  body, 
+  nav.navbar{
     max-width: 2560px;
     font-size: 1.5em;
   }
