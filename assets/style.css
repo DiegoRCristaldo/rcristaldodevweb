@@ -1,22 +1,33 @@
 *{
   margin: 0;
-  border: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+  scroll-padding-top: 16vh;
 }
 body {
   margin: 0 auto;
-  font-family: 'Verdana', 'Geneva', 'Tahoma', 'sans-serif';
-  font-size: 16px;
-  line-height: 1.5;
-  color: #333;
+  font-family: 'Inter', 'Verdana', 'Geneva', 'Tahoma', 'sans-serif';
 }
-
+p{
+  font-size: 16px;
+}
 /* Navbar */
+.navbar-brand,
+.menu{
+  font-size: 16px;
+  font-family: 'Inter';
+  font-weight: bolder;
+}
 nav.navbar {
-  position: absolute;
-  width: 100%;
+  position: fixed;
+  width: 100vw;
   z-index: 5;
-  padding: 1.4em 0;
+  padding: 16px;
+  height: 16vh;
+  background-color: rgba(90, 34, 182, 0.5);
 }
 
 .navbar-brand, 
@@ -29,20 +40,25 @@ nav.navbar::before {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(88, 36, 182, 0.7);
+  width: 100vw;
   z-index: 1;
 }
-ul>li>a.nav-link{
+.nav-item{
   position: relative;
+  text-align: center;
   z-index: 3;
   cursor: pointer;
+  background-color: rgba(90, 34, 182, 0.5);
 }
-/* Banner */
+.nav-item:hover{
+  background-color:  rgba(90, 34, 182, 0.7);
+}
+li{
+  padding: 16px;
+}
+/* Banner*/ 
 #banner {
-  width: 100%;
-  height: auto;
+  height: 100vh;
   background-image: url('./imagens/terra.jpg');
   background-size: cover;
   background-position: center;
@@ -54,18 +70,19 @@ ul>li>a.nav-link{
   position: relative;
   z-index: 2;
 }
-.texto-central{
-  margin-top: 25vh;
+.titulo{
+  font-size: 36px;
+  font-weight: bolder;
+  font-family: 'Kyiv*Type Serif';
+  margin-top: 35vh;
+}
+.subtitulo{
+  font-size: 20px;
+  font-weight: bolder;
+  font-family: 'Kyiv*Type Serif';
 }
 h2{
   text-align: center;
-  padding: 0.6em;
-}
-h2, h3{
-  font-size: 1.8em;
-}
-h4{
-  font-size: 1.5em;
 }
 div.conteudo-central{
   display: flex;
@@ -73,213 +90,450 @@ div.conteudo-central{
   justify-content: center;
   align-items: center;
 }
-#motivos, 
-#contatos{
-  background-color: #fffcf2;
+.digitando{
+  border-right: 4px solid #ffffff;
+  white-space: nowrap;
+  width: 17ch;
+  overflow: hidden;
+  animation: digitando steps(17) 2s, marcador 0.5s infinite;
 }
-#servicos{
-  background-color: #add8e1;
+.delay{
+  animation-delay: 2s;
 }
-div.galeria img{
-  max-width: 95%;
-  height: auto;
+@keyframes marcador {
+  50%{
+    border-right: transparent;
+  }
 }
-div.motivos{
+@keyframes digitando {
+  0%{
+    width: 0;
+  }
+}
+
+/*Sobre*/
+#sobre{
+  background-color: #cacecf;
+}
+.px-5{
+  padding-right: 4px !important;
+  padding-left: 4px !important;
+}
+.card{
+  flex-wrap: wrap;
+  width: 280px;
+  height: 360px;
+  transition: transform 0.2s;
+  border-radius: 16px;
+  margin: 0 auto;
+  box-shadow: 4px 8px 32px #ffffff;
+}
+.card:hover{
+  transform: translateY(-8px);
+}
+.card-body{
+  width: 100%;
+  background-color: #E8E7D6;
+  border-radius: 0 0 16px 16px;
+}
+.img-visao{
+  border-radius: 96px;
+  padding: 4px;
+}
+.img-valores{
+  align-self: center;
+  width: 120px;
+  height: 120px;
+}
+.img-diamante{
+  width: 160px;
+  height: 160px;
+  margin-bottom: -32px;
+}
+
+/*Motivos para ter um site*/
+#motivo{
+  background-color: #e6e6e6;
+}
+.motivos{
   display: flex;
   flex-direction: column;
 }
-div.motivos-card{
+.motivos-card{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: none;
-  opacity: .5;
   background-size: 200% 100%;
+  padding: 8px;
 }
-div.motivos-card p{
+.motivos-card p{
   color: #fff;
-  padding: 1.2em;
+  padding: 8px;
   font-family: 'Roboto', sans-serif;
   display: none;
+  font-size: 16px;
 }
-div.motivos-card p, 
-.card-text p{
-  font-size: 1.5em;
-}
-div.motivos-card:hover{
+.motivos-card:hover{
   display: flex;
-  flex-direction: row;
   flex: 1 0 70%;
   background-image: url('./imagens/fundo.jpg');
   background-position: -100% 0;
-  border-radius: 20px;
+  border-radius: 16px;
   object-fit: cover;
-  box-shadow: 3px 3px 50px #092ad3;
-  padding: 0.8em;
+  box-shadow: 4px 4px 32px #092ad3;
   opacity: 1;
-  transform: translate(15px, -15px);
+  transform: translate(12px, -12px);
   transition: .7s;
 }
-div.motivos-card:hover p{
+.motivos-card:hover p{
   display: inline-block;
   transition: 1.5s;
 }
-div.par:hover{
-  display: flex;
-  flex-direction: row-reverse;
-}
 .numeros{
-  width: 9.4em;
-  height: 9.4em;
+  height: 96px;
   background-color: #fff;
-  padding: 7px;
+  padding: 8px;
   cursor: pointer;
 }
-.card{
-  transition: transform 0.2s;
-}
-.card:hover{
-  transform: translateY(-7px);
+
+/*Serviços*/
+#servico{
+  background-color: #C0DEEE;
 }
 .card-title, 
 .card-text{
-  font-family: 'Verdana', 'Geneva', 'Tahoma', 'sans-serif';
+  font-family: 'Inter', 'Verdana', 'Geneva', 'Tahoma', 'sans-serif';
+  text-align: center;
 }
-.icone{
-  width: 2.2em;
-  margin: 5px;
+.card-title{
+  font-weight: bold;
 }
-.whats{
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  z-index: 4;
+.card-img-top{
+  width: 100%;
+  height: 128px;
+  border-radius: 16px 16px 0 0;
+}
+.card-servicos{
+  height: 440px;
+}
+.btn-primary{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 8px;
+}
+
+/*Portifólio*/
+#portifolio {
+  height: 136px;
+  background-color: #c2f7ff;
+}
+#carousel,
+.carousel-inner,
+.carousel-item,
+.card-principal{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel-inner{
+  width: 100%;
+  position: relative;
+}
+.card-principal{
+  position: static;
+  width: 260px;
+  height: 168px;
+  z-index: 2;
+  border-radius: 16px;
+}
+.card-principal:hover{
+  border: solid 4px #7B1DC5;
+}
+.card-secundario {
+  width: 180px;
+  height: 108px;
+  opacity: 70%;
+  position: relative;
+  z-index: 1;
+  border-radius: 16px;
+  top: 4px;
+  margin: 0 -172px;
+}
+.imc, .rcristaldo, .guiafinanceiro{
+  background-size: cover;
+}
+.imc{
+  background-image: url('./imagens/imc.png');
+}
+.rcristaldo{
+  background-image: url('./imagens/rcristaldo.png');
+}
+.guiafinanceiro{
+  background-image: url('./imagens/guiaFinanceiro.png');
+}
+.carousel-control-prev-icon{
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+}
+.carousel-control-next-icon{
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e"); 
 }
 .whats img{
-  width: 3.2em;
-  height: 3.2em;
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 4;
 }
+
+/*Footer*/
 footer{
   background-color: #5824b7;
+}
+#contato{
+  padding-top: 72px;
+}
+.icone-whats,
+.icone-facebook,
+.icone-instagram,
+.icone-email,
+.icone-linkedin,
+.icone-github{
+  width: 40px;
+  margin: 4px;
+}
+.icone-facebook{
+  height: 36px;
+}
+.icone-email,
+.icone-linkedin{
+  height: 44px;
+}
+.github{
+  border-radius: 24px;
+}
+.redes-paragrafo{
+  font-size: 16px;
+  margin: 4px;
+  text-align: left;
+  align-self: center;
 }
 footer a{
   text-decoration: none;
   color: #fff;
   cursor: pointer;
+  font-family: 'Inter';
+  padding: 4px;
 }
-@media (min-width: 319px){
-  body, 
-  nav.navbar{
-    max-width: 320px;
-  }
-  div.motivos-card:hover{
-    display: flex;
-    flex-direction: column;
-  }
-  .navbar-brand{
-    font-size: 15px;
-  }
+.redes{
+  display: flex;
+  align-items: start;
 }
-@media (min-width: 374px){
-  body, 
-  nav.navbar{
-    max-width: 375px;
-  }
-  div.motivos-card:hover{
-    display: flex;
-    flex-direction: column;
-  }
-  .navbar-brand{
-    font-size: 18px;
-  }
+.logo{
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 36px;
+  opacity: 70%;
+  margin-top: -54px;
+  top: 84px;
+
 }
-@media (min-width: 424px){
-  body, 
-  nav.navbar{
-    max-width: 425px;
+a.rodape cite{
+  font-size: 20px;
+  font-weight: bold;
+  padding: 4px;
+}
+@media (min-width: 375px) {
+  .card{
+    width: 280px;
   }
-  .navbar-brand{
-    font-size: 22px;
+  .logo{
+    top: 64px;
   }
 }
-@media (min-width: 574px){
-  body, 
-  nav.navbar{
-    max-width: 575px;
+@media (min-width: 575px) {
+  .titulo{
+    font-size: 48px;
   }
-  #banner{
-    padding: 80px 0;
+  .subtitulo{
+    font-size: 24px;
   }
-  .navbar{
-    padding: 10px 0;
+  div.motivos{
+    width: 100%;
   }
-}
-@media (min-width: 767px){
-  body, 
-  nav.navbar{
-    max-width: 768px;
-  }
-  div.motivos-card:hover{
-    display: flex;
-    flex-direction: row;
-  }
-  div.par:hover{
-    display: flex;
+  .par:hover{
     flex-direction: row-reverse;
   }
-}
-@media (min-width: 1023px){
-  body, 
-  nav.navbar{
-    max-width: 1024px;
-    font-size: 1em;
+  .motivos-card{
+    flex-direction: row;
+  }
+  .card-secundario{
+    margin: 0 -96px;
   }
 }
-@media (min-width: 1439px){
-  body, 
-  nav.navbar{
-    max-width: 1440px;
-    font-size: 1.2em;
-  } 
-  nav.navbar {
-    width: 1440px;
+@media (min-width: 768px) {
+  .navbar-brand, .menu{
+    font-size: 20px;
   }
-  .navbar-brand{
-    font-size: 24px;
+  .titulo{
+    font-size: 56px;
   }
-  .lead{
-    font-size: 24px;
+  .subtitulo{
+    font-size: 28px;
   }
-  .btn-lg{
-    font-size: 24px;
-  }
-  .card-title{
-    font-size: 1.2em;
-  } 
-  .card-text{
-    font-size: 0.8em;
-  }
-  .btn-primary{
-    font-size: 1em;
+  .row>*{
+    width: 360px;
   }
   .numeros{
-    width: 200px;
+    height: 112px;
   }
-  div.motivos-card>p{
-    font-size: 1.2em;
+  #portifolio{
+    height: 168px;
+  }
+  .card-principal{
+    width: 360px;
+    height: 224px;
+  }
+  .card-secundario{
+    width: 240px;
+    height: 136px;
+    margin: 0 -124px;
+  }
+  .whats img{
+    width: 74px;
+    height: 74px;
+  }
+  #contato{
+    padding-top: 104px;
+  }
+  div.redes{
+    align-self: center;
+  }
+  .margem-extra{
+    margin-left: 24px;
+  }
+  .logo{
+    top: 36px;
+    right: 340px;
   }
 }
-@media (min-width: 2559px){
-  body, 
-  nav.navbar{
-    max-width: 2560px;
-    font-size: 1.5em;
+@media (min-width: 992px) {
+  li{
+    padding: 16px 8px;
   }
-  nav.navbar {
-    width: 2560px;
-  }  
-  .numeros{
-    width: 250px;
+  .nav-item{
+    background-color: transparent;
+  }
+  .titulo{
+    font-size: 76px;
+  }
+  .subtitulo{
+    font-size: 36px;
+  }
+  .card{
+    margin: 0 14px;
+  }
+  div.row{
+    flex-wrap: nowrap;
+  }
+  .row>*{
+    width: 320px;
+  }
+  .motivos-card p{
+    font-size: 20px;
+  }
+  .whats img{
+    width: 96px;
+    height: 96px;
+  }
+  #portifolio{
+    height: 196px;
+  }
+  .card-principal{
+    width: 440px;
+    height: 280px;
+  }
+  .card-secundario{
+    width: 360px;
+    height: 176px;
+    margin: 0 -172px;
+  }
+  #contato{
+    padding-top: 136px;
+  }
+  .redes{
+    margin-left: 36px;
+  }
+  .icone-whats,
+  .icone-facebook,
+  .icone-instagram,
+  .icone-email,
+  .icone-linkedin,
+  .icone-github{
+    width: 50px;
+  }
+  .icone-facebook{
+    height: 46px;
+  }
+  .icone-email,
+  .icone-linkedin{
+    height: 54px;
+  }
+  .cel-flex{
+    flex-direction: row !important;
+  }
+  .redes-paragrafo{
+    font-size: 20px;
+  }
+  .logo{
+    width: 96px;
+    height: 96px;
+    top: 100px;
+    right: 856px;
+    border-radius: 64px;
+  }
+  a.rodape cite{
+    font-size: 24px;
+  }
+}
+@media (min-width: 1024px) {
+  .logo{
+    top: 124px;
+    right: 876px;
+  }
+  .card-servicos{
+    height: 480px;
+  }
+}
+@media (min-width: 1280px) {
+  .row>*{
+    margin: 0 auto;
+    width: 360px;
+  }
+  .redes{
+    margin-left: 112px;
+  }
+  .logo{
+    right: 1120px;
+  }
+}
+@media (min-width: 1440px) { 
+  li{
+    padding: 16px;
+  }
+  .navbar-brand, .menu{
+    font-size: 22px;
+  }
+  .titulo{
+    font-size: 84px;
+  }
+  .card-servicos{
+    width: 320px;
+  }
+  .logo{
+    right: 1280px;
   }
 }

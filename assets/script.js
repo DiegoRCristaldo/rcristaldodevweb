@@ -1,34 +1,51 @@
-document.addEventListener('DOMContentLoaded', function(){
-    let ativar = document.querySelectorAll('motivos-card');
-    ativar.forEach(function(ativado){
-        ativado.addEventListener('click', function(){
-            ativado.classList.toggle('ativar');
-        });
+let currentIndex = 0;
+const classNames = ['rcristaldo', 'imc', 'guiafinanceiro'];
+const links = {
+    'rcristaldo': 'http://rcristaldodevweb.netlify.app',
+    'imc': 'http://imc-link.com',
+    'guiafinanceiro': 'http://guiafinanceiro.netlify.app'
+};
+
+function updateClasses() {
+    const mainCard = document.querySelector('.card-principal');
+    const secondaryCards = document.querySelectorAll('.card-secundario');
+    const carouselLink = document.getElementById('carousel-link');
+
+    // Remover todas as classes específicas das imagens
+    classNames.forEach(className => {
+        mainCard.classList.remove(className);
+        secondaryCards.forEach(card => card.classList.remove(className));
     });
-});
-/*
-var fotos = document.querySelectorAll('.foto');
-var fotoAtual = 0;
 
-var voltar = document.getElementById('voltar');
-var passar = document.getElementById('passar');
+    // Atualizar classes
+    mainCard.classList.add(classNames[currentIndex]);
+    secondaryCards[0].classList.add(classNames[(currentIndex + 1) % classNames.length]);
+    secondaryCards[1].classList.add(classNames[(currentIndex + 2) % classNames.length]);
 
-function mostrarFoto(index) {
-    for (var i = 0; i < fotos.length; i++) {
-        fotos[i].style.display = 'none';
-    }
-    fotos[index].style.display = 'block';
+    // Atualizar o link conforme a classe principal
+    carouselLink.href = links[classNames[currentIndex]];
 }
 
-mostrarFoto(fotoAtual);
+function voltar() {
+    currentIndex = (currentIndex + 1) % classNames.length;
+    updateClasses();
+}
 
-voltar.addEventListener('click', function() {
-    fotoAtual = (fotoAtual - 1 + fotos.length) % fotos.length;
-    mostrarFoto(fotoAtual);
-});
+function passar() {
+    currentIndex = (currentIndex - 1 + classNames.length) % classNames.length;
+    updateClasses();
+}
 
-passar.addEventListener('click', function() {
-    fotoAtual = (fotoAtual + 1) % fotos.length;
-    mostrarFoto(fotoAtual);
+// Desativar clique em cartões secundários
+document.addEventListener('DOMContentLoaded', function() {
+    const secondaryCards = document.querySelectorAll('.card-secundario');
+    
+    secondaryCards.forEach(card => {
+        card.addEventListener('click', function(event) {
+            event.stopPropagation();
+            event.preventDefault();
+        });
+    });
+
+    updateClasses();
 });
-*/

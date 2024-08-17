@@ -4,24 +4,22 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Desenvolvimento Web - R Cristaldo Dev Web">
-    <meta name="keywords" content="desenvolvimento web, sites, landing page, responsivo">
+    <meta name="description" content="Desenvolvimento Digital - R Cristaldo Dev Digital">
+    <meta name="keywords" content="desenvolvimento digital, sites, landing page, página de internet, loja virtual">
     <meta name="author" content="R Cristaldo">
     <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <title>R Cristaldo Dev Web</title>
+    <title>R Cristaldo Des. Digital</title>
   </head>
 
   <body>
     <header>
-    </header>
-    <main>
       <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg">
-        <div class="container">
-          <a class="animate__animated animate__backInLeft navbar-brand" href="index.html">R Cristaldo Desenvolvimento</a>
+      <nav id="nav" class="navbar navbar-expand-lg">
+        <div class="container menu">
+          <a class="animate__animated animate__backInLeft navbar-brand text-center" href="index.html">R CRISTALDO<br/>Desenvolvimento Digital</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -29,100 +27,127 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="animate__animated animate__backInRight navbar-nav ms-auto">
               <li class="nav-item">
-                <a class="nav-link" href="/index.html">Indice</a>
+                <a class="nav-link" href="/#sobre">Sobre</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/#motivos">Motivos</a>
+                <a class="nav-link" href="/#motivo">Motivos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/#servicos">Serviços</a>
+                <a class="nav-link" href="/#servico">Serviços</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/#entreEmContato">Contato</a>
+                <a class="nav-link" href="/#portifolio">Portifólio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/#contato">Contatos</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
 
+    </header>
+    <main>
       <!-- Banner -->
       <section id="banner" class="bg-light py-5 text-center">
-        <div class="container conteudo-central">
-          <h1 class="animate__animated animate__backInLeft display-4 texto-central">R CRISTALDO</h1>
-          <h2 class="animate__animated animate__backInRight text-center"><strong>Desenvolvimento Web</strong></h2>
-          <p class="animate__animated animate__backInUp lead">Encontre as melhores soluções em desenvolvimento web para a
-            sua empresa</p>
-          <a href="#servicos" class="animate__animated animate__backInUp btn btn-primary btn-lg">Ver Serviços</a>
+        <div class="conteudo-central">
+          <h1 class="display-4 titulo digitando">&lt;R CRISTALDO&sol;&gt;</h1>
+          <h2 class="animate__animated animate__bounceInDown delay text-center subtitulo">Desenvolvimento Digital</h2>
+        </div>
+      </section>
+
+      <!-- Sobre -->
+      <section id="sobre" class="py-4">
+        <div class="container">
+          <h2 class="text-center mb-4"><strong>Sobre Nós</strong></h2>
+          <p class="text-center px-5">A R Cristaldo Desenvolvimento Digital foi fundada em 2023 e trabalha na criação de páginas na internet, sites empresariais, criação de lojas virtuais e desenvolvimento de sistemas.
+          </p>
+          <div class="row">
+            <div class="col-lg-4 mb-4">
+              <div class="card">
+                <img src='../assets/imagens/missao.webp' class="img-valores" alt="">
+                <div class="card-body fundo-valores">
+                  <h3 class="card-title">Missão</h3>
+                    <p class="card-text">Promover a integração de empresas e clientes através da Internet. Para conectar pessoas de forma prática e ágil, facilitando o dia a dia.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+              <div class="card">
+                <img src='../assets/imagens/visao.jpg' class="img-valores img-visao" alt="">
+                <div class="card-body fundo-valores">
+                  <h3 class="card-title">Visão</h3>
+                    <p class="card-text">Buscamos conectar pessoas a empresas que respeitem sua dignidade e respeitem a causa animal e ambiental.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+              <div class="card">
+                <img src='../assets/imagens/valores.png' class="img-valores img-diamante" alt="">
+                <div class="card-body fundo-valores">
+                  <h3 class="card-title">Valores</h3>
+                    <p class="card-text">Trabalhar com dedicação atendendo as expectativas de nossos clientes para que possamos agregar valor ao produto final.</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       <!-- Motivos para ter um site -->
-      <section id="motivos" class="py-5">
+      <section id="motivo" class="py-4">
         <div class="container">
           <h2 class="text-center mb-4"><strong>Motivos para ter um site</strong></h2>
           <div class="motivos container">
             <div class="motivos-card">
               <img class="numeros" src="../assets/imagens/numeros/1.png">
-              <p><strong>Visibilidade Global:</strong> Um site permite que sua empresa seja encontrada por clientes em todo o mundo, aumentando sua visibilidade.</p>
+              <p><strong>Visibilidade Online: </strong>Um site permite que sua empresa seja encontrada na internet, alcançando um público global 24 horas por dia, 7 dias por semana.</p>
             </div>
             <div class="motivos-card par">
               <img class="numeros" src="../assets/imagens/numeros/2.png">
-              <p><strong>Credibilidade e Profissionalismo:</strong> Um site bem projetado constrói confiança e mostra que sua empresa é profissional e confiável.</p>
+              <p><strong>Marketing Eficaz: </strong>É uma ferramenta poderosa de propaganda, permitindo alcance a um público-alvo específico, ofertas especiais pelo site fidelizam clientes e promove maior interação.</p>
             </div>
             <div class="motivos-card">
               <img class="numeros" src="../assets/imagens/numeros/3.png">
-              <p><strong>Marketing Eficiente:</strong> Serve como plataforma central para estratégias de marketing digital, facilitando a promoção e mensuração de campanhas.</p>
-            </div>
-            <div class="motivos-card par">
-              <img class="numeros" src="../assets/imagens/numeros/4.png">
-              <p><strong>Acesso Fácil a Informações:</strong> Fornece uma fonte fácil de acesso para informações essenciais sobre produtos, serviços, horários e contato.</p>
-            </div>
-            <div class="motivos-card">
-              <img class="numeros" src="../assets/imagens/numeros/5.png">
-              <p><strong>Interatividade e Engajamento:</strong> Possibilita a interação direta com clientes, permitindo feedback, perguntas e construção de relacionamentos.</p>
+              <p><strong>Concorrência: </strong>Muitas empresas já têm presença online, ter um site coloca você em pé de igualdade com a concorrência e pode ajudá-lo a se destacar.</p>
             </div>
           </div>
+        </div>
       </section>
 
       <!-- Serviços -->
-      <section id="servicos" class="py-5">
+      <section id="servico" class="py-4">
         <div class="container">
-          <h2 class="text-center mb-4"><strong>Nossos Serviços</strong></h2>
+          <h2 class="text-center mb-4 "><strong>Nossos Serviços</strong></h2>
           <div class="row">
             <div class="col-lg-4 mb-4">
-              <div class="card">
+              <div class="card card-servicos">
                 <img src='../assets/imagens/landingPage.png' class="card-img-top" alt="">
                 <div class="card-body">
-                  <h3 class="card-title">Landing Page</h5>
-                    <p class="card-text">Ideal para empresas que utilizam as redes sociais para contato com o cliente,
-                      otimizando a divulgação, profissionalizando seu negócio e exibindo seu trabalho.</p>
+                  <h3 class="card-title">Single Page/</br>Landing Page</h3>
+                    <p class="card-text">Ideal para empresas que utilizam as redes sociais para contato com o cliente, otimizando a divulgação, profissionalizando seu negócio e exibindo seu trabalho</p>
                     <a href="https://wa.me/5519989909456?text=Gostaria%20de%20alavancar%20as%20vendas%20da%20minha%20empresa%20com%20uma%20Landing%20Page."
                       class="btn btn-primary">Tenho Interesse</a>
                 </div>
               </div>
             </div>
             <div class="col-lg-4 mb-4">
-              <div class="card">
-                <img src='../assets/imagens/responsivo.jpg' class="card-img-top" alt="">
+              <div class="card card-servicos">
+                <img src='../assets/imagens/caixa.png' class="card-img-top" alt="">
                 <div class="card-body">
-                  <h3 class="card-title">Site Responsivo</h5>
-                    <p class="card-text">Um site responsivo se adapta ao tamanho da tela do usuário. O cliente ao acessar
-                      o site da sua empresa verá um site profissional respondendo a todos os tipos de tela, sejam eles
-                      smartphones, tablets, notebook, entre outros.</p>
+                  <h3 class="card-title">Sistemas</br>Financeiros</h3>
+                    <p class="card-text">Ideal para empresas que desejam controlar fluxo de caixa, entrada e saída de mercadorias, evitando gastos desnecessárias e prevenindo futuras perdas.</p>
                     <a href="https://wa.me/5519989909456?text=Gostaria%20de%20alavancar%20as%20vendas%20da%20minha%20empresa%20com%20um%20Site%20Responsivo."
                       class="btn btn-primary">Tenho Interesse</a>
                 </div>
               </div>
             </div>
             <div class="col-lg-4 mb-4">
-              <div class="card">
-                <img src='../assets/imagens/dinamico.jpg' class="card-img-top" alt="">
+              <div class="card card-servicos">
+                <img src='../assets/imagens/lojaVirtual.jpg' class="card-img-top" alt="">
                 <div class="card-body">
-                  <h3 class="card-title">Site dinâmico</h5>
-                    <p class="card-text">O site dinâmico é ideal para empresas que vendem produtos que podem sofrer
-                      alterações de preço com o tempo. O conteúdo do site pode ser trocado e se expande ao longo do tempo.
-                      Esse tipo de site é ideal para loja de roupas, restaurantes e empresas que possuam produtos com
-                      estoque rotativo.</p>
+                  <h3 class="card-title">Loja</br>Virtual</h3>
+                    <p class="card-text">Ideal para empreendedores que desejam alavancar suas vendas e expandir o alcance de seus produtos e mercadorias, aumentando a disponibilidade da sua loja </p>
                     <a href="https://wa.me/5519989909456?text=Gostaria%20de%20alavancar%20as%20vendas%20da%20minha%20empresa%20com%20um%20Site%20Dinâmico."
                       class="btn btn-primary">Tenho Interesse</a>
                 </div>
@@ -132,58 +157,82 @@
         </div>
       </section>
 
-      <!-- Contatos -->
-      <section id="contatos" class="py-5">
-        <div class="row">
-          <div class="col-lg-1 md-1"></div>
-          <div class="col-lg-4 mb-4">
-            <div class="card">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3676.0615895258434!2d-47.09954212536975!3d-22.87418313670529!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8c64d4d9ade75%3A0xa5c0c0013a29fcb5!2sR.%20Colonia%20do%20Figo%2C%2043%20-%20Jardim%20Chapad%C3%A3o%2C%20Campinas%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1696627398880!5m2!1spt-BR!2sbr"
-                style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-              <div class="card-body">
-                <h4 class="card-title">Nosso Endereço</h5>
-                  <p class="card-text">Rua Colônia do figo, 47 - Jardim Chapadão, Campinas - SP, 13070-115</p>
-                  <a href="https://maps.app.goo.gl/DkVKvNvgoyy4UzQH6" class="btn btn-primary">Ir para o Maps</a>
-              </div>
+      <!-- Portifólio -->
+      <section id="portifolio" class="py-3">
+        <h3 class=" text-center"><strong>Portifólio</strong></h3>
+        <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner d-flex justify-content-center align-items-center">
+                <a id="carousel-link" href="http://rcristaldodevweb.netlify.app">
+                    <div data-bs-slide="0" class="carousel-item d-flex">
+                        <img onclick="voltar()" class="card-secundario rcristaldo" alt="">
+                        <img class="card-principal imc" alt="">
+                        <img onclick="passar()" class="card-secundario guiafinanceiro" alt="">
+                    </div>
+                </a>
             </div>
-          </div>
-          <div class="col-lg-2 md-2"></div>
-          <div class="col-lg-4 mb-4">
-            <div class="card">
-              <div class="card-body">
-                <h4 id="entreEmContato" class="card-title">Entre em contato</h5>
-                  <p class="card-text">Acesse nossas redes</p>
-                  <p class="card-text"><img class="icone" src="../assets/botoes/whats.webp">(19)98990-9456</p>
-                  <p class="card-text"><img class="icone" src="../assets/botoes/email.png">diegorcristaldo@hotmail.com</p>
-                  <a href="https://www.facebook.com/profile.php?id=100076215697987"><img class="icone"
-                      src="../assets/botoes/facebook.png"></a>
-                  <a href="https://instagram.com/rcristaldodevweb?igshid=NzZIODBkYWE4Ng=="><img class="icone"
-                      src="../assets/botoes/instagram.png"></a>
-                  <a
-                    href="https://wa.me/5519989909456?text=Gostaria%20de%20alavancar%20as%20vendas%20da%20minha%20empresa%20com%20uma%20Página%20de%20Internet."><img
-                      class="icone" src="../assets/botoes/whats.webp"></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-1 md-1"></div>
+            <button onclick="voltar()" class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button onclick="passar()" class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
         </div>
-        <a href="https://wa.me/5519989909456?text=Gostaria%20de%20alavancar%20as%20vendas%20da%20minha%20empresa%20com%20uma%20Página%20na%20Internet."
-          class="animate__animated animate__bounceInDown whats" target="_blank"><img src="../assets/botoes/whats.webp"
-            alt="Icone do whatsapp"></a>
-      </section>
+      </section>    
+      <a href="https://wa.me/5519989909456?text=Gostaria%20de%20alavancar%20as%20vendas%20da%20minha%20empresa%20com%20uma%20Página%20na%20Internet."
+          class="animate__animated animate__bounceInDown whats" target="_blank">
+          <img src="../assets/botoes/whats.png" alt="Icone do whatsapp">
+      </a>
     </main>
 
     <!-- Footer -->
     <footer class="text-light py-3 text-center">
-      <div class="container">
-        <a href="index.html">&copy; 2024 R CRISTALDO Desenvolvimento Web. Todos os direitos reservados. Site desenvolvido por R CRISTALDO
-          Desenvolvimento Web.</a>
+      <h3 id="contato"><strong>Entre em contato</strong></h3>
+      <p class="card-text">Acesse nossas redes</p>
+      <div class="d-flex flex-column">
+        <div class="d-flex flex-column cel-flex container redes">
+          <div class="d-flex flex-column redes">
+            <a class="d-flex flex-row" href="https://wa.me/5519989909456?text=Gostaria%20de%20alavancar%20as%20vendas%20da%20minha%20empresa%20com%20uma%20Página%20de%20Internet.">
+              <img class="icone-whats" src="../assets/botoes/whats.png">
+              <p class="redes-paragrafo">(19) 98990-9456</p>
+            </a>
+            <a class="d-flex flex-row" href="https://www.facebook.com/profile.php?id=100076215697987">
+              <img class="icone-facebook" src="../assets/botoes/facebook.png">
+              <p class="redes-paragrafo">facebook.com/profile.php?id=100076215697987</p>
+            </a>
+            <a class="d-flex flex-row" href="https://instagram.com/rcristaldodevweb?igshid=NzZIODBkYWE4Ng==">
+              <img class="icone-instagram" src="../assets/botoes/instagram.png">
+              <p class="redes-paragrafo">instagram.com/rcristaldodevweb/</p>
+            </a>
+          </div>
+          <div class="d-flex flex-column redes margem-extra">
+              <a class="d-flex flex-row" href="">
+                <img class="icone-email" src="../assets/botoes/email.png">
+                <p class="redes-paragrafo">diegorcristaldo@hotmail.com</p>
+              </a>
+              <a class="d-flex flex-row" href="https://www.linkedin.com/in/diego-rodrigues-cristaldo-99a53215a">
+                <img class="icone-linkedin" src="../assets/botoes/linkedin.png">
+                  <p class="redes-paragrafo">linkedin.com/in/diego-rodrigues-cristaldo-99a53215a</p>
+                </a>
+              <a class="d-flex flex-row" href="https://github.com/DiegoRCristaldo">
+                <img class="icone-github github" src="../assets/botoes/github.png">
+                <p class="redes-paragrafo">github.com/DiegoRCristaldo</p>
+              </a>
+          </div>
+          <div class="d-flex redes">
+            <a href="index.html">
+              <img class="d-flex flex-start logo" src="./assets/imagens/logo.png" alt="">
+            </a>
+          </div>
+        </div>
       </div>
+      <a class="rodape" href="index.html">
+        <cite>&copy; 2024 R CRISTALDO Desenvolvimento Digital. Todos os direitos reservados.</cite>
+      </a>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/script.js"></script>
   </body>
 
 </html>
