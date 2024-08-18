@@ -1,8 +1,8 @@
 let currentIndex = 0;
 const classNames = ['rcristaldo', 'imc', 'guiafinanceiro'];
 const links = {
-    'rcristaldo': 'http://rcristaldodevweb.netlify.app',
-    'imc': 'http://imc-link.com',
+    'rcristaldo': 'http://rcdesenvolvimentodigital.com.br',
+    'imc': 'http://indiceimc.com.br',
     'guiafinanceiro': 'http://guiafinanceiro.netlify.app'
 };
 
